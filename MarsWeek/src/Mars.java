@@ -1,7 +1,5 @@
 public class Mars {
 
-
-
     public static void main(String[] args) {
         // Step 1 - Variables & Data Types
         String colonyName = "Alpha Bear";
@@ -25,12 +23,10 @@ public class Mars {
         } else {
             System.out.println("ERROR!!! Flight plan already set. Landing on the Plain.");
         }
-
         landing = landingCheck(40);
     }
 
     private static boolean landingCheck(int minutesLeft) {
-
         // Loop to calculate directions. Seems kind of crazy as large numbers will take forever.
         for (int minute = 0; minute <= minutesLeft; minute++) {
             if ((minute % 6) == 0) {
@@ -42,7 +38,6 @@ public class Mars {
             } else {
                 System.out.println("Calculating");
             }
-
             // To catch exceptions I guess?
             // Really seems like it's just in case if there is an error that the 'Thread.sleep()' causes.
             try {
@@ -52,7 +47,6 @@ public class Mars {
                 System.out.println("There was an error: " + e);
             }
         }
-
         // After finishing our directions, we land.
         System.out.println("Landed");
 
@@ -60,5 +54,4 @@ public class Mars {
         // Feel like landingCheck should return true after we finish landing...
         return false;
     }
-
 }
