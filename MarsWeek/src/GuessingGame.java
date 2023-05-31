@@ -2,7 +2,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class GuessingGame{
-    public static void main(String[] args) {
+    public GuessingGame() {
         // Scanner initialization
         Scanner scan = new Scanner(System.in);
 
@@ -16,7 +16,7 @@ public class GuessingGame{
 
         // Declaration of the rest of variables needed that will be used outside the loop
         int userGuess = -1;
-        int userGuessCount = 0;
+        int userGuessCount = 1;
 
         while (userGuess != mysteryNumber) {
             if (userGuessCount == 0) {
@@ -37,9 +37,16 @@ public class GuessingGame{
             catch (Exception e) {
                 System.out.println("Error: " + e);
             }
-            userGuessCount++;
+
+            // No need to check if the user's guess is correct as the while loop will break itself when it is correct.
+            // But since it is asked in the MVP to have one, it is below.
+            if (userGuess == mysteryNumber) {
+                break;
+            }
+            else {
+                userGuessCount++;
+            }
         }
-        // No need to check if the user's guess is correct as the while loop will break itself when it is correct.
         System.out.println("\nCongratulations " + name + "!\nIt took you " + userGuessCount + " tries to guess " + mysteryNumber + ".");
     }
 }
