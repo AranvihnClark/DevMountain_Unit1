@@ -1,6 +1,10 @@
-public class GuessingGame {
+import java.util.Scanner;
+
+public class GuessingGame{
     public static void main(String[] args) {
-        System.out.println("Welcome to the Guessing Game.");
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Welcome to the Guessing Game.\nWhat is your name?");
+        String name = scan.nextLine();
 
     }
 }
