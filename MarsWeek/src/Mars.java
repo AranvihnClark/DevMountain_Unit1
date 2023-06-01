@@ -49,9 +49,12 @@ public class Mars {
         } else {
             System.out.println("ERROR!!! Flight plan already set. Landing on the Plain.");
         }
-        landing = landingCheck(40);
+        landing = landingCheck(10);
 
         // Project 3 call (guessing game)
         new GuessingGame();
+
+        // Project 4 call (mars expedition)
+        new MarsExpedition();
     }
 }
