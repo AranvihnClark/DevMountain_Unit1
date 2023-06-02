@@ -54,7 +54,10 @@ public class Mars {
         // Project 3 call (guessing game)
         new GuessingGame();
 
-        // Project 4 call (mars expedition)
+        // Project 4 call (Mars expedition)
         new MarsExpedition();
+
+        // Project 5 call (findings list)
+        new FindingsList();
     }
 }
